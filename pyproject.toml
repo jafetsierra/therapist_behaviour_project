@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "therapist-behaviour-project"
+version = "0.1.0"
+description = "temporal repo for therapist project assesment"
+authors = ["jafet sierra"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.1"
+matplotlib = "^3.8.3"
+transformers = "^4.39.2"
+evaluate = "^0.4.1"
+accelerate = "^0.28.0"
+datasets = "^2.18.0"
+fastapi = "^0.110.0"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+typer = "^0.11.1"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
