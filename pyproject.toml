@@ -19,6 +19,7 @@ typer = "^0.11.1"
 langchain = "^0.1.13"
 cloudpathlib = "^0.18.1"
 openai = "^1.14.3"
+langchain-openai = "^0.1.1"
 
 
 [tool.poetry.group.dev.dependencies]

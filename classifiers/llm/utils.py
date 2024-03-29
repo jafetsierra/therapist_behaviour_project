@@ -12,7 +12,7 @@ from langchain.prompts.chat import (
     SystemMessagePromptTemplate,
 )
 from langchain.prompts.loading import load_prompt_from_config
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from fastapi import HTTPException
 
 def load_llm(config: dict, temperature: float = 0.0):
@@ -30,20 +30,6 @@ def load_llm(config: dict, temperature: float = 0.0):
         _ = config.pop("_type")
         config["streaming"] = config.pop("stream", False)
         return ChatOpenAI(cache=False, **config)
-
-    # if config["_type"] == "claude":
-    #     logging.info(f"Boto 3 version: {boto3.__version__}")
-    #     session = boto3.Session()
-    #     bedrock_client = session.client(
-    #         service_name="bedrock",
-    #         region_name="us-east-1",
-    #     )
-    #     bedrock = Bedrock(
-    #         model_id="anthropic.claude-v2:1",
-    #         streaming=True
-    #     )
-    #     bedrock.model_kwargs = {"temperature": temperature, "max_tokens_to_sample": 4096}
-    #     return bedrock
 
     return load_llm_from_config(config)
 

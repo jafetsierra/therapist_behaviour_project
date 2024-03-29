@@ -5,7 +5,7 @@ memory:
   ai_prefix: AI
   human_prefix: Human
   input_key: human_input
-  max_token_limit: 500
+  max_token_limit: 16000
   memory_key: history
   output_key: null
   return_messages: false
