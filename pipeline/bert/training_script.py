@@ -1,5 +1,6 @@
 import torch
 import typer
+import pandas as pd
 
 from torch.utils.data import DataLoader
 from transformers import DistilBertTokenizer
@@ -10,7 +11,8 @@ from .utils import Therapist, DistillBERTClass, train, valid, load_data
 
 
 def main(
-    data_path: Annotated[str, typer.Option(help="Path to the data file")],
+    train_data_path: Annotated[str, typer.Option(help="Path to the train data file")],
+    test_data_path: Annotated[str, typer.Option(help="Path to the test data file")],
     MAX_LEN: Annotated[int, typer.Option(default=512,help="Maximum length of the input")],
     TRAIN_BATCH_SIZE: Annotated[int, typer.Option(default=12,help="Training batch size")],
     VALID_BATCH_SIZE: Annotated[int, typer.Option(default=12,help="Validation batch size")],
@@ -23,9 +25,10 @@ def main(
 
     tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased')
 
-    train_dataset, test_dataset = load_data(data_path)
+    train_dataset = pd.read_csv(train_data_path)
+    test_dataset = pd.read_csv(test_data_path)
 
-    training_set = Therapist(train_dataset, tokenizer, MAX_LEN)
+    training_set = Therapist(train_dataset, tokenizer, MAX_LEN) 
     testing_set = Therapist(test_dataset, tokenizer, MAX_LEN)
 
     train_params = {'batch_size': TRAIN_BATCH_SIZE,

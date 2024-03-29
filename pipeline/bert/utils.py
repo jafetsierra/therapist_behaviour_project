@@ -71,7 +71,9 @@ def load_data(path)-> Tuple[pd.DataFrame, pd.DataFrame]:
 
     df['encode_cat'] = df['category'].apply(lambda x: encode_cat(x))
 
-    train_size = 0.8
+    df = df.drop_duplicates(subset=['text'])
+
+    train_size = 0.9
     train_dataset=df.sample(frac=train_size,random_state=200)
     test_dataset=df.drop(train_dataset.index).reset_index(drop=True)
     train_dataset = train_dataset.reset_index(drop=True)

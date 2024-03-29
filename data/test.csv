@@ -1,0 +1,379 @@
+text,category,encode_cat
+Where do you wanna go from here? What do you wanna change about your drinking habits?,question,0
+"If I gave you a scale from 0 to 10, 0 being not ready at all to cut back on drinking and 10 being very ready, what number would you be at?",question,0
+Okay. Okay. And how about going to see the doctor? Have you gone to-- for a visit or anything recently?,question,0
+"Um, what would- what would make you decide, ""This is something that's not right for me?""",question,0
+I guess that it does.,other,3
+"Yeah, it looks nice. So, you want to monitor it and-and-",therapist_input,1
+"Emily, you said it so well it-",other,3
+Yeah?,other,3
+Mm.,other,3
+"Okay. So, what did you say to Donna?",question,0
+-kids and stuff like that and how you were saying that the offending doesn't fit in with that dream or that idea.,reflection,2
+"Okay. So-so Donna's helped calm you down and you'd like, um, them to calm down too?",question,0
+"Okay. So-so what's the definition, for you, of a good mate?",question,0
+- and do you have a sense of-of what some of the doctor's concerns were that led her to refer you?,question,0
+"So your asthma has been acting up and there's a lot of stuff, not just the asthma going on?",reflection,2
+"Well, we have about, I guess, 15 or 20 minutes together and I wonder, would it be okay, if we took a couple of minutes and just kind of looked at all of the different things that are going on for you and maybe you can let me know, what would be the most helpful to spend-spend some time on?",question,0
+"Okay. Well, one of the things that-that we use are these-- it's kind of like a worksheet and it's an agenda-setting worksheet basically.",therapist_input,1
+"So if you were to-to list all of the different things that people around you are saying that you need to work on or you need to change, what would some of those things be? And, Sal, just because we write them down here, it doesn't mean that you have to change them.",question,0
+- sounds like. Okay.,other,3
+You're still feeling the effects of-,reflection,2
+"Right, and is that something that has been, you know, a way of coping for a while?",question,0
+Tell me more about that.,question,0
+I get the feeling that your relationship is really important to you. That you would do anything.,reflection,2
+About a five. So you're halfway there. So why did you choose a five rather than a four?,question,0
+"So, I'm gonna ask the question this way, on a scale of 0 to 10, where 0 is not at all confident, and 10 is like, ""I'm very, very confident,"" where would you put yourself on a scale right now of confidence in starting this new plan?",question,0
+"So the part of you that does see this is-- as an issue, yeah, that the gambling sometimes can be out of control, you know, tell me that part of you that-that maybe knows that, uh, it's getting you into trouble and it's gone way-- just moved you off from that point, there have been some—",question,0
+"Right now, though, it feels almost too difficult to even manage or even to try?",reflection,2
+But they don't feel as scary to you now?,reflection,2
+"Hi, Laura.",other,3
+"Okay. And, what kinds of things do you plan for your life?",other,3
+Do you have a plan as to where you might want to go or?,question,0
+"-in those situations? That's great. You know, it's-it's tough to do sometimes, and I really commend you for being able to-to stick with that.",reflection,2
+"Okay. And, how confident are you that you could make a change if you decide you wanted to on that same scale?",question,0
+"Okay. Um, do you feel pretty confident that you could just stop completely?",question,0
+"Okay. So, it's-- It sounds like you're actually pretty comfortable with setting a goal of not drinking anymore a-at least at the next part? and seeing how it goes.",reflection,2
+"All right, great. And then, i-it sounds like some of the benefits you're expecting are, um, health benefits-",reflection,2
+"-of course, that's harder if you're not the one planning. So, some of the things that can be useful if you're at a party say, um, and there's already alcohol there, and there are other kids that maybe aren't your closest friends, um, some of the things that I would recommend since you're interested are, you know, carrying around a different drink that looks like it has alcohol in it. So, you know, even carrying an empty beer bottle or beer can or, you know, if people are having a mixed drink, just having the coke, say-",therapist_input,1
+Family happiness?,question,0
+"Right. So, right now, it really is important to you to put the family values first? And religion is still very important to you, but you feel like maybe you're losing faith a little bit?",reflection,2
+"Inner harmony, health, and security.",reflection,2
+You're not even on-- Are you on the schedule at all? Meaning of time in a day dedicated? Is most of it going to your family?,question,0
+Mm. Mm-hmm.,other,3
+So I understand that you were referred to me by your GP because you've been experiencing some anxiety difficulties.,other,3
+"Okay. So you said that, um, your difficulties are getting in the way of you doing certain things. So they're, they're stopping you from taking up kind of certain types of work and as a freelance photographer, I guess that- that can be kind of a problem. And they're also stopping you or you feel like it's stunting you, uh, socially. You're not kind of able to make new friends and get to meet new people.",reflection,2
+"Hey, can I help you?",question,0
+"Okay. So you feel like, right now, smoking's a pretty important part of your life. It's not something you're ready to change, but if the time came when you did decide to quit, you feel pretty confident that you could go ahead and do that.",reflection,2
+"Sure. I wonder if now that your workplace is going smoke-free, if there will be some people at work who planning to quit.",question,0
+"So, on a scale from 1 to 10, 1 being not important and 10 being very important, where would you rate yourself on how important it is to start exercising more?",question,0
+That's great. It sounds like you've got some options and leads on how- on how to get that done.,reflection,2
+"Yeah, so then it's, um, right now, uh, tell me a little bit about, um, right now at this point in your life why it's so important to quit.",question,0
+"Oh my goodness. Okay. And so, and that-- yeah, that's very-- that's really scary beginnings of emphysema, I'm sorry to hear that.",reflection,2
+Smart girl.,reflection,2
+"Um, have there been some times in the past where you were able to quit smoking completely?",question,0
+"And it sounds like it's paired, like a coffee and a cigarette. I mean, you know, probably hard to think about, ""How will I have a cup of coffee without a cigarette?""",reflection,2
+"-it will do whatever you need it to do at any given time. The downside is-is it-it kinda get, it gets in the end with the health.",therapist_input,1
+"So, and I would- I would-- it really is because it wasn't like that 20 years ago.",reflection,2
+"Yeah. Well, um, first of all, I really am passionate about looking at the whole picture, um, physical health and emotional wellbeing and what I found in working with clients in the past is when, um, we make a focus of weight loss, sometimes, uh, physical health improves, but at the cost of emotional wellbeing.",therapist_input,1
+-to your meals and snacks.,other,3
+"Absolutely, I appreciate you sharing that piece with me and you absolutely get to have that desire. And, um, we certainly are bombarded all day long with messages about how a body is supposed to look and so we all, um, certainly have moments of feeling dissatisfied with how our bodies look. And so you're absolutely, um, welcome to hold that and we can have space for that and you can certainly talk about that in these sessions. And I'll check in with you as we're going through the process of behavior change, um, to see how your body confidence is, um, as we talk more.",therapist_input,1
+"Fantastic. Thanks, Natalie.",other,3
+"Um, you will be getting violations for that, and then if you get so many violations, I mean, we'd have to write a warrant for your arrest, which is looking more of, um, detention time.",therapist_input,1
+"So-so on the one hand, the doctor talked to you about high cholesterol, down the line possibly causing a stroke or heart attack-",reflection,2
+"So, this is something that you-you-",reflection,2
+As long as I don't talk too much?,reflection,2
+"Yeah. Well, and, David, honestly, wherever you're at, we'll work with it.",therapist_input,1
+"So, for you, you're feeling like once the baby comes and actually in your arms, then things are going to change, but right now, while you're pregnant, you're thinking, ""I can kind of hang out in both worlds a little bit,"" but part of you may be thinking maybe that's not the case. It's time to go to the mom world maybe.",reflection,2
+"And you really wanna do what's best for your babe. And kind of wondering, um, how to move forward from here, is that where you wanna, you know, kind of focus in on, or what are your thoughts about giving up drinking altogether?",question,0
+"Yeah. Is that something that, um, maybe you and I could meet again about-and talk about having those conversations with-with the family, maybe having conversations about, you know, the folks, your-your friends that are currently in the lifestyle that you were involved with, um, and then sort of what it would look like to go down path B, is that something that you would be open to meeting with me about again?",question,0
+Yeah. Tell me a little bit about yourself.,question,0
+- how are you taking them?,question,0
+Okay. Okay. And what about tests? Have you had any tests for these problems?,question,0
+"Um, you've tried a lot of tablets. Some prescribed, some herbal remedies-",reflection,2
+Right. And how were you tummy symptoms then?,question,0
+"Mm. I'm not saying that the pain's in your mind. Um, I guess what I'm saying is that sometimes the way that we feel, and the way that our lives are going, can impact how we notice our symptoms. Given that we've tried medication for you, and we've tried investigations, and we've drawn a blank really, with those, none of those have really helped you-",reflection,2
+And it sounds as though you're not doing lots of the things that you used to do. That you-,reflection,2
+"Well, I guess what I'd be wondering is whether one of the approaches we need to be using now is thinking about what you do with your life, and what you do with your day, and maybe trying to bring back some of those pleasurable things, you know, even if it's just meeting up-",therapist_input,1
+"And the fact that you-you seem to be taking quite a lot of them, and I'm wondering whether it's worth, though, sitting and looking at them and-and maybe trying to rationalize them a little bit, and really decide which are helping you, which are doing nothing, and which may actually be making some of your symptoms worse, I guess.",reflection,2
+"Well, I guess if we- if we did decide to-to work together like this-",therapist_input,1
+"So, you're working, and then, on top of that, juggling being a single mom and going to school?",reflection,2
+"So, you're not only doing really tiring work and going to school, but you're also worrying about your finances.",reflection,2
+"Okay, will you be interested in hearing about those recommendations?",question,0
+And you've perhaps never seen it in that light before.,reflection,2
+I-it seems like it-it would be quite a hard pattern to change.,reflection,2
+"So, if you could somehow tackle some of these stressful issues, um, that could make a difference, and, what-what would that be, for example?",question,0
+"It's so interesting because there's immediate feedback. I mean, that's immediate feedback. Um, so we're- we're talking about quitting or here quitting completely. What thoughts do you have? You tried the Chan- the Chantix, meditation, you like that so, um, I can run some ideas that some other clients have used [crosstalk]-",question,0
+Could be?,question,0
+Mm-hmm,other,3
+"Cool, that's great.",other,3
+Uh-uh.,other,3
+"Oh, okay.",other,3
+So that positive self-talk could really go a long way for you?,question,0
+Yeah. And there is and I'm sure that it is really struggling at times too.,reflection,2
+Your freedom?,question,0
+What are some other ways you feel like you can get your freedom back?,question,0
+"That's okay. Well, I know that you are making an effort. I do appreciate then and when-when I do stop by that you still sign the paperwork even though you feel like it's annoying at times. So, thank you for, uh, at least doing that.",other,3
+"That's great. And I hope you continue to avoid those things. As your doctor, I want you to know that I'm concerned about your drinking. When teens drink, things can go wrong, like injuring yourself. Even when you don't drink too excess, though, your brain is still developing and is very sensitive to the effects of alcohol.",therapist_input,1
+"Okay, okay. So, there's a shift from last time?",question,0
+"Yeah, that's okay.",other,3
+"Yeah. Yeah, so-so, you fluttered last night with them?",question,0
+"Yeah? Yeah. ""Do I continue with the, you know, my little current lifestyle,"" and you are so much the party girl you used to be-- I was speaking to last time-",reflection,2
+"No, that's true.",other,3
+"Yeah. Well, yeah.",other,3
+Yeah? So how today have you sort of found some ways to manage that?,question,0
+"Yeah, yeah. Something we can- we can do over the next while is-is really get some very concrete things in place to support you to do that.",therapist_input,1
+"Yeah, yeah, yeah.",other,3
+So let's talk about how we can organize a-a meeting with them.,therapist_input,1
+"Um, and then there's some negatives with, um, you know, your-your co-workers, um, that they don't, you know-- then your boss may not want you, you know, checking out-",reflection,2
+I think that's great.,therapist_input,1
+"Hi, Nick. Thank you for completing the CRAFFT questionnaire. I also appreciate you sharing some information about yourself.",reflection,2
+"sI see from the questionnaire, did you have got in trouble while using alcohol? Can you tell me more about that?",question,0
+"I'm gonna make sure I understand. You have tried drinking a couple of times, and you almost got in trouble once. Did I get that right?",reflection,2
+"Based on your reason for your visit today, I feel like you really wanted to play soccer, and you have great goals about that.",reflection,2
+"Um, we were talking a little bit earlier, and you said you wanted to talk about exercising.",reflection,2
+"All right, so I'll see you next week.",other,3
+Right. What else can you tell me about your heroin use?,question,0
+"So, uh, you wrote on here that you've experienced withdrawal symptoms when you've stopped using in the past, is that right?",therapist_input,1
+What does that feel like?,question,0
+Great. I'll see you then.,other,3
+"I know, I-I understand that it was really-- That was your goal. That was a really important thing for you to be able to get home and it sounds like you've been able to really en- enjoy parts of it, and I know you've been going to the- both the physical therapy and the Tai Chi and how's-how's that going?",reflection,2
+"And you had this fall or semi-fall, and you're feeling like maybe- maybe you were pushing too hard?",reflection,2
+"Um, I'm wondering what you remember about what-what Dr. Fields said about the Tai Chi in relationship to falls. Did she talk with you about that?",question,0
+"Yeah, right.",other,3
+"Um, so one of the things that- that we also have here, we-we have- we can get some case- what they call case management services and that might be someone who comes in and checks with you at home and helps you figure out some of the things that might need to be done like you were talking about, give you a little refresher on safety at home-",therapist_input,1
+"So what ideas do you have about initially just getting started, and what-what would you do [unintelligible 00:04:13] ?",question,0
+"And if you arrange to meet somebody there, you're very good at, uh, you know, uh, keeping the agreement.",therapist_input,1
+"-whereas like, you can't go up to him and say, ""Hey, can I have some of your McDonald's French fries,"" and take them out—",reflection,2
+"You can't, no, not one of mine. So, um when are you thinking you might want to do this?",question,0
+"So, for you, it's your, you know, it sounds like you really want to be prepared.",reflection,2
+"Okay, yeah.",other,3
+"Oh, you're welcome. My pleasure, thank you.",other,3
+"Uh-huh. So, you thought it was beautiful and you liked the instructor, but you were a little self-conscious because you were in a chair?",reflection,2
+"And so, are you wanting to go back to tai chi?",question,0
+"Uh-huh. I think it's important, um, that you know that you're the one who has to make the decision about whether or not tai chi works for you.",other,3
+-it sounds like you'd like to try and give it another chance?,reflection,2
+Uh-huh. Yeah.,other,3
+-but you're a little fuzzy on the details.,reflection,2
+"And then, you know, it might be, I definitely think that if you're committed and it's summer break, it's something you could easily get done in a week.",therapist_input,1
+"And, uh, um, you do this how often?",question,0
+So you're an occasional meth user. You don't use very often?,reflection,2
+Only snort it?,question,0
+-with zero being not ready at all-,question,0
+Are there any other concerns that you have about Methamphetamine?,question,0
+Nice to meet you.,other,3
+And that's led you to being here today?,question,0
+-for you?,question,0
+Quite a lot's changed over the last year from—,reflection,2
+Hmm. Hmm.,other,3
+"I'm happy with that. What do you think will happen, what might happen if you can turn your-your uses- you're on now? What-what concerns do you have about not making any kind of change?",question,0
+"And everyone, most people are using.",other,3
+So there is a possibility that there are other parts of the scene that don't rely on drug use-,reflection,2
+"-the unpleasantness of that. Okay. What else might be on the, not so good side about smoking- about stopping?",question,0
+How are you doing today? I'm Bruce Berger.,question,0
+"Okay. And I-- And what I want to do is help you kind of break this up into some-some doable chunks so that we can get your blood sugar down. I, you know, on the one hand, your doctor is right, you know. Your blood sugar is very high and we do wanna get it down so that we don't have those consequences happen. Uh, and-and there are a number of things that you need to do in order to-to get your blood sugar down. Um, you know, on the other hand, we can take this a step at a time, so it's not so overwhelming.",therapist_input,1
+"So when you think about these things, are there any things you would like to change about your marijuana use?",question,0
+So I don't know how much you know already about sort of my role here and why you're even here. So I thought I'd start by telling you a little bit about myself.,other,3
+"Basically, my job is to meet with all of the students. I meet with everybody about once or twice a semester and just talk with you a little bit about how things are going, different behaviors that you might be engaging in, and thinking about any changes you might wanna make for your life if you decide that you do. It's not my job to change you. I couldn't even if I wanted to. That's not my role at all. It's really to help you think about, you know, how things are going for you and how you might like making changes or moving forward.",therapist_input,1
+"Uh-huh. Okay. So, on the one side, some of the fun things associated with alcohol are people are just more relaxed, sorta, um, carefree can kind of let loose a little bit more, on-on the other hand, there's a little bit more, I guess, planning involved-",reflection,2
+Okay. So you're sort of looking for that balance-,reflection,2
+-would like to make some adjustments-,reflection,2
+Fantastic. Thank you.,other,3
+"Mm. Makes it harder? Yeah. Well, it can make it harder to keep a job, aye?",question,0
+"Yeah? So, what have you been thinking, um, since we last met, about what you might do about getting that kind of job?",question,0
+"Mm-hmm. So, as long as it has to do with cars, you'd be sweet with that?",reflection,2
+"That's fantastic, Billy.",other,3
+"Okay. I'm wondering about-- because it sounds like this whole idea about filling out the forms, is getting in the way of this bigger dream that you've got which is around getting a qualification around something to do with cars-",reflection,2
+"Yeah? So, what do you think, between now and next week, you can do around the forms?",question,0
+Mm. Okay.,other,3
+"All right. So, it sounds like we might need to have some more conversation around that.",therapist_input,1
+-so I'm wondering where you are around your writing and you're reading?,question,0
+You tried oxy? Okay.,reflection,2
+"Okay. So you trusted him on that, and you tried it out and you found that it helped you in certain ways. What are some of the things that you said it's-- takes some of the pain away, it's not just-- you know.",reflection,2
+"Yes, um, so you did do your Values Clarification Sheet. Is there anything that you'd like to talk about that you discovered?",question,0
+So you've taken that into account that-,reflection,2
+"Oh, of course, of course. And what are the things that you'd like to be able to do once you get home?",question,0
+Which build people up and have masculinizing effects.,therapist_input,1
+"If-if I can draw an analogy-- Again, even though this medicine is in the same family as those big broad-broad family. If I could draw an analogy, a grape and a watermelon are in the same family of fruits, you know, and obviously, grape is much smaller than a watermelon. And if you eat one grape, you'd be fine. If you ate an entire watermelon, it can make you very sick. If we look at the grape as the medicine your daughter's taking, again, it's in the same broad family, the amount of drug that your daughter is getting is very small. Uh, and not only that it's not an anabolic steroid, even though it's in the same big family. And what this drug does is actually reduces the inflammation in your daughter's lungs. And-and it doesn't even get absorbed into the body. It only goes to her lungs. And as I said, I wouldn't want your daughter taking a medication that could have the impact of those anabolic steroids. This is really safe for your daughter to use. So what-what are your thoughts about considering having her using this?",therapist_input,1
+And-and it's hard to replace it with something.,therapist_input,1
+"Yeah, because you'll get that inflammation down.",therapist_input,1
+"Use the chronic inhaler every day, keep the rescue inhaler around if she needs it. Uh, and let's see how that works.",therapist_input,1
+And any thoughts about what concretely you could do to make that happen?,question,0
+Tell me about how you've been feeling?,question,0
+So you're feeling uncomfortable with changes in your body?,reflection,2
+What about it seems overwhelming?,question,0
+"Sure, we can do that together.",other,3
+Would you like to answer some questions and kind of do a self-evaluation about how you're feeling around alcohol and the contraception?,question,0
+Right down the bottom? Down Bluff?,question,0
+What was-- what was your partner's name?,question,0
+Okay. What do you think it might be like for you to explore that with them?,question,0
+"Yeah. How would it be for your mum, do you think, if you were to tell her that this is something that you're-- is really important for you and that you know that this time you really need to do this for her and for the family? What-what might that be like for her to hear?",question,0
+Mm. So it sounds you're worried that it's gonna be a waste of your time this time too.,reflection,2
+You're right. I don't know what it's like to be you and what I'm getting a sense of is that it's actually important that the person sitting opposite you in this role needs to understand what it's like to be you. Is that right?,therapist_input,1
+"Is that what I'm hearing? Yeah. So in terms of dealing with it, where-where would you be, do you reckon? How interested would you be in dealing with that stuff?",question,0
+-and really thinking about what's got you into trouble and hence something about what gets you into trouble.,reflection,2
+"Okay, so getting into trouble and, uh, getting caught and-and we see [unintelligible 00:05:36] does about luck and this time being unlucky.",reflection,2
+"Mm-hmm, okay. So some stuff that you can think, ""Oh yeah, I had, you know, I did some stuff that yeah, got me into trouble.""",reflection,2
+"Mmh, and when we might be talking about something that doesn't interest you, what would I notice?",question,0
+"Hi, Billy, how are you doing? It's good to see you again.",question,0
+Oh okay. Tell us something about Donna.,question,0
+So what's special about Donna?,question,0
+"So, we were, um- we were just talking a little bit about sustained talk, which most people call denial.",therapist_input,1
+"So, um, it also, um-- Anyway, it's-it's when people are just saying, ""Um, you know, this is why I don't wanna change. You know, I'm happy the way that I am. You know, it's, you know, um, God made it that marijuana stuff,"" you know, things like that. So-",therapist_input,1
+"Okay, mild schizophrenia is fine. Good. Okay, so-",reflection,2
+Very dull.,reflection,2
+"Mm. So, and then you said, you don't like how it makes you act, um, if you can tell me a little bit about that.",question,0
+You were right.,reflection,2
+"So, you'd really like to stay out of that hospital?",question,0
+Running around naked.,reflection,2
+"So, if-if-if we could maybe find a medication that didn't give you as bad side effects, perhaps you might not have to drink as much or at all or smoke a little weed to take the edge off. I mean, who knows? [unintelligible 00:09:55]",reflection,2
+You were pretty shocked at what you learned about your patterns.,reflection,2
+Okay. Anything that your mom could do to help you with that?,question,0
+Not going to bed on time.,reflection,2
+Kind of a reminder it's time to go to bed.,reflection,2
+"So for you being in your class, when that bell rings, then you know, this is the goal.",reflection,2
+"So what I've been hearing so far- what again, what a great goal. You've already had some insight of how to do this. So for you, it's really important that you're getting to your first hour because you don't want to go back to sanction days. You don't having- like having all these extra people checking up on you and all those things.You've already have a plan of going to bed by 11:00, turning off the lights, putting your cell phone away. Even the support of your mom is really gonna be helpful for you, um, getting up at 6:15 in the morning with that alarm. I know that seems really early in the morning, but you seem willing to do it. And if you're not able to do it, your mom's gonna help you out as well.",reflection,2
+"Okay. Um, what is it that you wanna get out of being here?",question,0
+"Okay. Um, and if you lost your job, what do you see being the consequences of that?",question,0
+Okay. Do you see that at all as being affected by the substance use?,question,0
+"Okay. So that's where you wanna get to. Um, what do you think that you need to do in the next, like, month or so to maybe help going in that direction?",question,0
+"A respirologist diagnosed that, and-and how are you feeling right now?",question,0
+Yeah. Okay. So physical activity is feeling like the easiest change to look at first.,reflection,2
+"Good, so, um, we're here today to talk just, uh, about whatever it is you'd like to talk about it.",other,3
+"Mm-hmm. So you kind of feel two ways about it. You-you'd like to, um, you feel like at some level that the time is up for that person to go, and on the other hand, there's a certain amount of security in having him in the house and in knowing he's around.",reflection,2
+Cause you wanna do the right thing because you're- because you're a good person and that's a- that's a really important value to you is that you- is that you help people out.,reflection,2
+"So, you might have to literally like pack his bags and help them get to those places, um.",reflection,2
+Yeah. You're-you're tired. You're stressed. You feel so sad to the point that you're hurting yourself physically so that you can feel something other than what you're feeling right now.,reflection,2
+"So your mom doesn't understand you and you don't have a dad, that's around?",reflection,2
+"So you feel like your hands are tied, you feel like you're a burden to mom. She's a single parent. She works a lot. You have all of these problems in your life. And it sounds to me like you feel like you're just adding more problems to her.",reflection,2
+"Okay. So then even by you coming here today, Ruth, and talking to me and opening up and telling me that you don't feel like you want to continue moving in and telling me and-and confiding in me that, you know, you hurt yourself and all this pain that you feel, that is you trying to help yourself out in one way or another. And that shows that you care. And even more, it shows that you care about your mom and that, in the end, it doesn't sound like you wanna leave her alone because you're still worried about ot-you're still worried about all the burdens on her that you're even thinking of removing yourselves to make her life easier. That shows me that you care about her so, so much, but right now the immediate solution that you have in your mind, it seems like it's-it's-",reflection,2
+Okay. And I'm wondering if you have any concerns about that.,reflection,2
+"No. Okay. So that's- that's not been an issue for you. Uh, it is an issue for him and not for you at this point.",reflection,2
+"Okay. So you don't feel very comfortable with somebody telling you what you should be consuming, what kind of alcohol, and how much alcohol you should be consuming. And, um, it sounds like you've been getting some mixed messages, your doctor's saying there's no safe amount of alcohol you can drink, and asked you to come and see me. And then also, you've been checking- sounds like you've been checking things out a little bit.",reflection,2
+"Okay. And I'm wondering if that concern is coming from, ""It's been okay. I've got these messages from friends.""",reflection,2
+You're not sure if he's sort of playing things up a little bit there?,reflection,2
+It might be a bit extreme to-,reflection,2
+Hmm. Kind of like protecting your baby and-,reflection,2
+"Mm-hmm, that's some really significant steps you're talking about. You're talking about putting the alcohol away, that's huge. That's-that's really big steps.",reflection,2
+"I really want to thank you for, you know, exploring this with me today, and I'm wondering if we can kind of continue this conversation again, and talk about those steps, and how it goes with talking to your partner about giving up drinking and, um, the- giving you a chance to do some more research and, you know, maybe looking through these brochures and kind of just coming back and sharing a little bit more about, you know, what you thought about the information and what feels right for you. Is that something you'd be open to?",therapist_input,1
+"Hi, Mike. I'm Kathy. Appreciate you coming in today.",other,3
+"That's fine. Okay. Um, so, what about the, uh- the first DUI, could you tell me a little bit about that? This was your second one?",question,0
+It was those two times. Yeah.,reflection,2
+Yeah. Is there alcohol with the- with-- Goes hand in hand with the bad luck or just--,question,0
+"Yeah. So, tell-tell me a little bit more about, um, when you fi-- If you'd find yourself, and then that-that thought comes about maybe doing something other than getting in the- in the car, does that come and go, or-or is it something that you think you-- Next time you might do?",question,0
+And your girlfriend's important to you-,reflection,2
+Is it-- Why'd she leave?,question,0
+"Oh, okay. So-so, um, you started drinking again, and then she left?",question,0
+She was separate then from your other friends and-,reflection,2
+That must have been scary.,other,3
+"Oh, that was blackout type?",question,0
+"So, they're important to you?",question,0
+"Yeah. So, uh, how often do you think you'll be needing that plan in the--",question,0
+"And then-- Yeah, and then also you said if you're going to have people, uh, you're gonna be drinking for the Super Bowl. Was is it Super Bowl?",question,0
+"I'm sorry, I'm not a football fan but it's Super Bowl coming up, right?",question,0
+"It sounds like you have-- You've thought about this, and you're-you're willing to put some things in place, the-the wallet, um, money in the wallet and-and for the taxi-",reflection,2
+"So-so, if you were not to-- If you were to go with the plan of maybe not drinking, which you mentioned-",reflection,2
+Um-,other,3
+What makes it uncomfortable?,question,0
+"Yeah-yeah, how important would it- would it be? Zero being not so important and 10 being pretty important that you--",question,0
+"Well, maybe that's something that we could talk about next time if you- if you want to.",therapist_input,1
+"Steve, before we're done with our visit today, I was wondering if you'd be willing to take a few minutes to talk about your drinking.",question,0
+"Okay, okay. I just wanted to let you know, I'm a little bit concerned about your level of drinking. We know that excessive drinking can make problems worse or can actually cause health problems at times, and I was just wondering if you thought about the connection between your drinking and things like the anxiety and the insomnia that you came in with today?",therapist_input,1
+"Mm-hmm. Okay. Well, that's a good place to start. So, I heard you say your health is important, and you're getting ready to run a marathon, so you wanna be able to do what you can to make that successful. And you also were a little bit surprised that you fell into this risky or hazardous category.",reflection,2
+"Okay. So, based on all that information, what are you willing to think about doing to change right now?",question,0
+Mm-hmm. So you're-you're Middle Eastern. So you wonder-- I-I bet you've had experiences where you really have experienced some absolute racism and prejudice because of that.,reflection,2
+And you can- you can prove that and document that.,reflection,2
+Discouraged.,reflection,2
+They are your experts.,therapist_input,1
+I couldn't believe that.,therapist_input,1
+All right. How often do you do that?,question,0
+"Mm-hmm. Okay. So let me just show you on this, um, card here, um, from a medical perspective, we know that there's good evidence that shows that women you're age who drink more than, um, three drinks on any one occasion at any- at any sitting or more than seven in a week, are likely to run into health problems from their drinking, either problems they're having right now or maybe in the future.",therapist_input,1
+"My perspective as a doctor, it would be good if you could think about cutting back a little bit or doing something different about your drinking. What-what do you think about that?",therapist_input,1
+-maybe you could tell me about how that's going?,question,0
+-is a big con.,other,3
+Okay. What kind of alcohol do you drink at parties?,question,0
+Okay. What plan could you come up with to make sure you achieve that goal?,question,0
+Okay. And how about unprotected sex? It sounds like you don't want to experience that again.,reflection,2
+"Okay. Let's pursue that neighbor a little bit. Um, people like that, I like to think of as natural resources, but I know for a lot of people, the major problem with, uh, childcare is affordability.",therapist_input,1
+"Were you aware of the fact that smoking these little cigarillos, the Swisher Sweets, can have some of the same negative health effects?",other,3
+--today.,other,3
+-or just local?,question,0
+So that's another realization.,reflection,2
+Mm. So the idea of counseling in your family is for crazy people only and it's looked down upon and the cost would cause a problem too?,reflection,2
+And it was fun at first. But now you're already noticing some consequences.,reflection,2
+"So, it helps you, kind of, loosen up, feel more relaxed.",reflection,2
+-or any other things?,question,0
+"Well, given that you've sort of noticed all these changes where it's affecting your friendships, it's affecting your studying, it's affecting your relationship with your mom. Where do you think you should kind of go from here?",question,0
+"Thanks for coming in and talking with me for a couple of minutes. I understand you don't have very much time, but I really appreciate you stopping by.",reflection,2
+So the last thing you'd want is for your daughter to start smoking.,reflection,2
+"So Sandra, what's good about smoking? What do you like about it?",question,0
+Okay. So I hear-- [crosstalk],other,3
+"So thanks for coming in, Sandra. We'll see you next week.",reflection,2
+Is that right?,question,0
+-a conversation inside. What other ideas do you have about what you could do?,question,0
+"That's okay. That's-- Yeah, 'cause it's not important. The important thing is for you to be happy. And, uh--",other,3
+"2,000-",therapist_input,1
+-when you know maybe they're gonna--,reflection,2
+Good. That's really good. Yeah. And if-if you need like some extra support from them--,question,0
+"Well, I would want this session though to be for you though, Molly.",therapist_input,1
+It is.,other,3
+"Hello, nice to meet you again. And, uh, and what seems to be the-the problem or what-what prompted you to come along?",question,0
+"Okay, I mean what do you think that next step is?",therapist_input,1
+You have to provide for your children.,reflection,2
+Right. So every day you know where you're going.,reflection,2
+"Uh, welcome. And, uh—",other,3
+So how are you feel in your head-,question,0
+Yeah. What's the problem? Mm.,reflection,2
+Because its genes or the-the-the-the hereditary factor is not the only factor that causes it or is involved in it happening to you. So there's other factors that come into play.,therapist_input,1
+They managed with it.,reflection,2
+If that would help.,other,3
+"Well, I'll perhaps share with you what I know from working with other people and some of the things I've experienced in working with people.",other,3
+"From your perspective, things are going well?",reflection,2
+Yeah. It doesn't fit.,reflection,2
+Too much.,reflection,2
+"Hmm. Hmm. Yeah, part of the culture.",reflection,2
+"Yeah, and it's hard to get to stop something you enjoy, isn't it?",reflection,2
+"No, no, I get that. I get that.",other,3
+"So part of that whole keeping fit and exercise stuff is actually the social side of it, isn't it?",reflection,2
+"-bit of a shake that I needed, you know, just sort of remind me. I might feel okay. I might-- From my perspective, your perspective, you're thinking, ""Well, what's the problem? Everything's fine.""",reflection,2
+It's not about giving up your personality or-,reflection,2
+-changing who you are fundamentally.,reflection,2
+So now it's time-,reflection,2
+"-before we go, I'd like to just-just give you a lot of- some information that might help-help you.",therapist_input,1
+Yeah. So why should she go through yours?,reflection,2
+Great. It sounds like there are a lot of activities that you do like-,reflection,2
+And I completely agree [laughs]about wanting to avoid the sales pitch-,reflection,2
+Okay. So you'd like to kind of get motivated with- with the use of an app and that might help you get started.,reflection,2
+-and you're not even smoking those in the house.,reflection,2
+"-but I wonder what are your experiences with Oscar, you know, when he's in the house or-or maybe sleeping near you or you're around him, what happens with your asthma symptoms?",question,0
+"Hmm. Yeah. And-and in the end, you know, whatever you- whatever you do, about Oscar, about your asthma, about all the other things that we talked about on that agenda-setting worksheet, I mean, you are in the driver's seat solid. It really is your choice.",other,3
+"All right, Well, first I'd just like to commend you for your honesty and that's really helpful information that you shared with me. Thank you for letting me know that you're smoking again and-and, um, I also appreciate the fact you're taking so many measures to protect your son from secondhand smoke. Can I give you some advice on how you could protect him, even the- even further?",question,0
+"Okay. Well, Hailey, what they suggest is that women don't have more than one to two standard drinks a day or a total of nine standard drinks in a week. How does that fit for you?",therapist_input,1
+"Sure, of course, Hailey a-and again I really appreciate your openness and honesty about letting me know what's going on with, you know, the stress levels and coping and drinking. I just had a thought that there's also a good mom's group, we run out of our center. So if you'd like a referral to that or some information, I'd be happy to give you and while you think about it, if you want to, um, talk about this further with one of my colleagues, I'd be happy to make you an appointment.",therapist_input,1
+So what would have happened if you found out that you were pregnant?,question,0
+You don't seem too happy about that.,reflection,2
+Yeah. So w-where do you think you can start with that?,question,0
+"Yeah. That would be a really good place to start, mm-hmm.",reflection,2
+So what's been there? What's it about that you haven't done in three weeks one day?,question,0
+Okay. Okay. So—,other,3
+"But I guess what I'm really interested in is-is you've made a commitment 22 days, drug-free. Haven't gone back into that lifestyle. What-what's keeping you, 'cause you're at the crossroads, you kind of just pause there at the moment. I'm not sure about this other bit over here. What keeping you in that place?",question,0
+"Sure, yeah.",other,3
+"Yeah. So catch me up with the conversations you've had with Fiona about this crossroads you're at. You know, these 22 days, you haven't gone back, you've coming out and you're not back? You could pick up this dealing quite easily and probably some workout here tomorrow and get back into it.",question,0
+"Yeah? So you're the sort of guy, Daryl, with guts?",reflection,2
+Yeah? You just described to me how it looked like a minute ago.,reflection,2
+You don't. And who's sitting on the porch with you?,question,0
+"So, um-- And-and maybe it's about small steps and first steps.",therapist_input,1
+-position?,question,0
+"Yeah, a steep, you see before you had a mate who turned his back on offending.",reflection,2
+So possibility to call?,other,3
+If you want to do that. It gotta be your call.,therapist_input,1
+"-the rise in your blood pressure is concerning to me, so I'd like to gather a bit more information about your lifestyle.",therapist_input,1
+"Okay. Um, what brings you in?",question,0
+"Okay. Well, we actually consider 20 cigarettes a day to be a significant amount, and in fact, I would then recommend to you that you would start on the highest dose of nicotine replacement.",therapist_input,1
+All right. Thank you so much.,other,3
+"-which is fantastic. So, the next step is to really deal with the dog, deal with the pet. I know it's- so- It's gonna be hard to do that. But there are always people who will adopt animals. I'm sure that you have friends or family members.",therapist_input,1
+"Okay. Behavior like this could get you suspended, doesn't that concern you?",therapist_input,1
+Wow. And how long have you been in marching band?,question,0
+It has a lot of alcohol in it.,other,3
+It sounds like you might be better off without them though. They’re-,reflection,2
+"Mm-hmm. So, um, so I think we should set a goal that you're gonna stop drinking.",therapist_input,1
+"And, um, I think you should probably stop as soon as possible, like this weekend.",therapist_input,1
+"Mm-hmm, and when you and your friends are hanging out, and what- what do you do? Do you go to football games, go to parties?",question,0
+"Okay. Cool. And, you know, what made you decide maybe law school or-or journalism?",question,0
+"Okay. What about at these parties you're going to, are there other kids there who are drinking a lot?",question,0
+Mr. Johnson?,question,0
+"All right. Well, yeah. So the issue again is I can't be hearing reports about you drinking. I can't be hearing that you're at parties and you can't be seeing pictures on Facebook. You know, there-there are rules at this school and in my job, I have to enforce them. So, you know, like I said, I get it, you know-",therapist_input,1
+What do you mean?,question,0
+"Tommy, I'm just so concerned, you know, can't you think of anything better to do?",question,0
+"So what's something that you'd like to change or, um, work towards?",question,0
+"Okay, so I wrote a prescription for an antibiotic for Aiden and that should help with the ear infection, but in looking through the chart, I mean, it seems like he's had six or seven of these just in the past year or so.",other,3
+"Okay. Well, I think you really need to think about this seriously. Like I said, it's really putting yourself and your child in danger.",other,3
+"Oh no, the smoking's going to cause you more problems than the-- than anything else. I can promise you that, David.",therapist_input,1
+"Okay. Well thanks for listening, and honestly, I- I am really worried about the smoking, so--",therapist_input,1
+"You're choosing to really damage your mouth and actually, it can cause problems with your teeth too. I don't know if you notice your teeth might be getting yellower than they were before. That's another side effect. There are a lot of really negative things that go along with any tobacco use, whether it's cigarettes, cigars, dip, chew, snuffs, snus, hookah, any of it. This is a really important decision that you're making and you said it's your choice, but you're really choosing to make yourself sick and potentially die.",therapist_input,1
+"Hello, Kaylie. It looks like you're here to pick up a prescription today.",reflection,2
+"No, wait a minute. That has everything to do with what we're talking about. I can't believe at the end of this appointment, you're just slipping in the fact that you've resumed smoking again. That's very, very important information for me to know. And I'd like to spend some time talking about it now.",therapist_input,1
+What are you drinking? What's the quantity that you're drinking.,question,0
+"Okay. Well, just remind me again why it is you want to stop.",question,0
+"Even more mess, you see.",other,3
+"The main reason that you smoke is because, at the end of the day, it gives you a kind of relaxation, and if there's quite a little stress that's going on which you're using cigarettes to help you cope with.",reflection,2

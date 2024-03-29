@@ -5,10 +5,10 @@ from transformers import DistilBertTokenizer
 from contextlib import asynccontextmanager
 
 from config import ENV_VARIABLES, MODELS_DIR
-from classifiers.bert.utils import DistillBERTClass
-from classifiers.llm.classifier import LlmClassifier
+from pipeline.bert.utils import DistillBERTClass
+from pipeline.llm.classifier import LlmClassifier
 from app.endpoints import api_router
-from classifiers.llm import load_yaml_dict, load_txt
+from pipeline.llm import load_yaml_dict, load_txt
 
 __VERSION__ = "0.1.0"
 STAGE = ENV_VARIABLES['STAGE']

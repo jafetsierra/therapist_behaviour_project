@@ -1,100 +1,100 @@
-Thanks for filling it out. We give this form to everyone once a year regardless of why they come in. It helps us provide better care. Is it okay if I take a look at what you put down?->question
-So, let's see. It looks that you put-- You drink alcohol at least four times a week on average-->therapist_input
--and you usually have three to four drinks when you do drink.->therapist_input
-Okay. That's at least 12 drinks a week.->therapist_input
-Okay. Just so you know, my role, um, when we talk about alcohol use, is just to share information about risk and to help patients who want help. This is different than telling them what I think they should do. I don't do that.->therapist_input
-Uh, what else can you tell me about your drinking.->question
-Okay. So, can I share with you some information on alcohol use?->question
-Okay. So, there has been a lot of research on alcohol use and the guidelines we use in this country says that having seven or more drinks per week can raise the risk of health problems for women.->therapist_input
-Seven.->therapist_input
-Yeah, you're surprised to hear that?->question
-Well things like heart disease, cancer, liver problems, uh, stomach pains, insomnia. Unfortunately, uh, people who drink at a risky level are more likely to be diagnosed with depression and alcohol can make depression worse or harder to treat.->therapist_input
-Well, how do you think your drinking relates to the depression you've experienced?->question
-Okay. And how do you feel after you drink?->question
-So, there are some answers on this form here. Uh, less than monthly you drank more than you intended to.->therapist_input
-And sometimes you feel guilty after you drink.->therapist_input
-So you're not proud of finishing a bottle?->question
-Right. By the way, binge drinking is defined for women as having more than, uh, three drinks and there are about five drinks in a bottle. So, you enjoy drinking wine because it helps make things, uh, a little bit more interesting when you're feeling down but at the same time you don't like drinking when you have more than you want it to and then the depression returns after you drink.->reflection
-Where do you wanna go from here? What do you wanna change about your drinking habits?->question
-If I gave you a scale from 0 to 10, 0 being not ready at all to cut back on drinking and 10 being very ready, what number would you be at?->question
-Okay. Why do you think it's not something less like a six?->question
-What would help you cut back to two drinks?->question
-Having less wine in the house will help?->reflection
-What else besides drinking helps you relax and unwind in the evenings?->question
-So, it's not just wine that helps you relax. Um, there's reading a book, watching a movie, and taking a hot bath too.->reflection
-Okay. So, it sounds like you have some reasons to cut back on drinking and you have ways to relax besides drinking and it sounds like you're pretty ready to cut back.->therapist_input
-Great. I'd be interested to see how well you do on your goal in the next few weeks. Would you be willing to come back and talk to me about it?->question
-Great. So, let's see how well you're doing with these new meds.->other
-And before you leave, uh, is it okay if we go over this screening form that you filled out today on your alcohol use?->question
-Okay. Uh, thanks for filling this out. Uh, looks like you use alcohol two to three days a week?->reflection
-Okay. And then when you do drink alcohol, you typically have five or six drinks.->reflection
+All right. Well, maybe it's something we can work on together. And, you know, I think we should come up with a plan that's gonna work for you so that you can get control here and stop drinking.->therapist_input
+Well, you know, uh, Scott, well, tell me a little bit since you brought that up. Yeah, obviously, drink and tell me a little bit about your [unintelligible 00:07:35]->question
+How are you feeling today?->question
+-your drinking eventually?->reflection
+Cool.->other
+So, Liz, what's something that you'd like to change or maybe that you're feeling two ways about right now?->question
+Not many?->question
+You're feeling regretful.->reflection
+-when you think about what he-he-- Yeah, he's stereotypical.->reflection
+And it sounds like your mom has been an option in the past, but perhaps not so much anymore.->reflection
+Emily, why? Why did you get your lip pierced?->question
+And the top two are family happiness and religion?->question
+Right, they weren't looking out for your best interest at that point.->reflection
+Um, how do you think that the drinking fits in with that?->question
+Fantastic. Well, um, now we can start looking at if you're interested in how that might look-->therapist_input
+Yeah. It should feel like there's something really wrong with you.->other
+Oh, fun.->other
+Yeah. Yeah->other
+So, given what you're-you're attempting to do, when would it be good for you to come back and talk about this?->question
+Mm-hmm. So kind of 9:00 to 5:00 sort of job.->reflection
+Mm-hmm. So what's the- what's the-- Say, if you get on the course-->other
+Yeah. Don't put words in your mouth. I'm sure if that is—->reflection
+Okay. So, I'm going to write down then that you've decided to quit.->therapist_input
+Especially with your job and-->reflection
 Okay. Well, the reason why I like to talk to patients when they fill out this form is because sometimes, uh, alcohol use can impact our health. Um, and my role is to be helpful. I can share some information with you about alcohol use, um, but I don't tell anyone what to do. It's always up to the patient to decide what they wanna do about their drinking. Um, so is it okay if we talk a little bit more about your alcohol use?->question
-How would you define drinking too much?->question
-Mm-hmm. Well, in this country, the guidelines are men can drink up to 14 drinks a week or up to four on one occasion and still be low risk.->therapist_input
-So a limit of four a night doesn't feel right to you?->reflection
-You're not alone in feeling that way. Uh, binge drinking can feel normal to some people.->reflection
-Why is that?->question
-Mm-hmm. Well, technically, we define binge drinking as having more than four drinks on one occasion.->therapist_input
-Well, uh, we know if someone binge drinks over time, there's kind of two categories of risk. There's the short-term risk where someone who binge drinks is more likely to fall down, hurt themselves through an accident, uh, they're more likely to drive while under the influence. Uh, but over the long term, binge drinking can also, uh, cause things like heart disease, uh, different kinds of cancer, liver problems obviously, and then even mental health issues like depression and anxiety are more likely to happen.->therapist_input
-Can I ask you, uh, what do you like about drinking alcohol?->question
-And so what about your drinking do you not like or is there anything that worries you about your drinking?->question
-So, on one hand, you like how beer tastes, uh, it's part of your social life to some extent, um, but on the other hand, you don't like the idea of it posing risks to your health over the long term?->reflection
-So weighing those things, you know, what you like about your drinking, what you don't like about your drinking, uh, where do you wanna go from here? Uh, what would you like to change about your drinking?->question
-Well, how about hypothetically if I were to ask you, how would your drinking have to impact your life in order for you to be ready to change your drinking?->question
-So if you experienced a negative consequence from your drinking, uh, that would feel meaningful to you?->reflection
-Okay. Well, I like to give this handout to patients. Uh, it defines risky drinking, it talks about what the consequences are, uh, and it also lists signs of what an alcohol use disorder is. So thanks again for taking the time to fill this out and being honest with me, uh, to talk about it. I provide better care, uh, when I know about my patient's substance use. When we come back for a three-month follow-up appointment for your ADHD, I'd also like to talk to you and check in about your alcohol use too, if that's okay with you.->therapist_input
-Okay, great. See you next time.->therapist_input
-Hi, John. Nice to see you again. So, tell me, how are things going?->question
-Well, I appreciate you bringing your weight to the forefront. Do you mind if we explore this issue further?->question
-All right. Uh, well, it sounds like you've been struggling with your weight recently. And I understand how difficult it is to lose the weight and then have it come back again. So, tell me what you did to lose that initial 5 pounds.->reflection
-But you did have some success. Tell me how you felt when you lost the weight.->reflection
-Okay. Well, it sounds like you realized that when you lost the weight you feel better and that it's gonna affect your overall health. So, tell me what you think changed that caused you to gain the weight back.->reflection
-And how many servings of fruits and vegetables on average per day would you have?->question
-John, it's very important that you recognize that some fruits, but especially fruit juice can contain a huge amount of calories. Did you know that a glass of orange juice has almost as many calories as a can of cola?->therapist_input
-You're absolutely right, but keep in mind that the food pyramid is to be used as a guideline only. When it comes to nutrition, we have to have a more personalized approach. So I have a hunch, and that is the excess fruit that you were consuming probably caused your weight rebound. What's your impression?->therapist_input
-Indeed. Let me ask you something, knowing what you know now, how important is it to you to lose the weight by decreasing the amount of juice that you're currently taking in?->question
-Oh, I understand. Let me ask you this, on a scale from 0 to 10, 0 meaning that there's no way you can do it, and 10 meaning that you're 100% confident that you can do it, how confident are you that you'll be able to reduce the amount of juice you're currently taking in.->therapist_input
-All right. So, you're not a zero. So, that tells me that you've got some confidence that this is doable, this is something you certainly can do it. Why are you not a zero?->question
-So, you realize, again, that if you decrease the amount of juice you're taking in, you're gonna decrease your weight, you're gonna feel better, and you're gonna impact your po- health positively?->reflection
-But you're also not a 10, and that tells me that there may be some obstacles to your success. What would it take for you to be a 10 or even an 8 or 9?->question
-Okay. Now, if the juice was still there, can you think of anything else you could do?->question
-Excellent. John, I get the impression that you want to stay in course with weight reduction. And the best way to do this will be to decrease the amount of juice that you're currently taking in. So if I saw you in two weeks and I asked you how much juice you're t- drinking and how you did it, what would you tell me?->reflection
-Excellent. Well, it sounds like you have a plan. Same scale, 0 to 10, how confident are you that you can, uh, make this happen?->question
-I agree. All right. Well, you-you know what? I'm not gonna start any medications today. Your levels were a little bit off, but I think we can handle this from a purely lifestyle standpoint. What do you think?->therapist_input
-Excellent. I'll see you in two weeks.->therapist_input
-Okay, and so what I'm hearing is that you don't feel like your health is concerning you right now, or anything like that?->reflection
-Okay.->other
-Okay. Have you noticed putting on any weight, or anything like--?->question
-Okay. Okay. And how about going to see the doctor? Have you gone to-- for a visit or anything recently?->question
-Okay. But you feel that you feel good?->question
-Okay. Um, and so what I hear is that you're-- you feel like your wife might be, uh, overreacting to this?->reflection
-Sure. Sure. Okay. Um, and so one thing I'd just like to do is maybe give you some information on, um, maybe obesity or diabetes if you're interested or open to that. If you're, you know--?->question
-Okay. Good.->other
-Hi, Emily.->other
-It's been a while.->other
-This is something new.->reflection
-You got your lip pierced. How long ago did you get that done?->question
-Hmm.->other
-What made you decide to get-get a lip piercing?->question
-Yeah, and it looks nice.->other
-Um, I guess, you know, as your dentist, I have- I have a couple of concerns about lip piercings, oral piercings. I wonder what have you heard about how having an oral piercing can affect your-your teeth or your gums?->question
-Mm-hmm.->other
-You do. you have beautiful teeth as I always tell you-->other
--every time you come in.->other
-Um, I mean I have had some patients with oral piercings and they can erode some of the gum right, um, just right there at the front.->therapist_input
-Um, so that's one-one thing, and the other is, um, I do see fair amount of chipped teeth-->therapist_input
--just from contact with it. I wonder what are your thoughts about that?->question
-Yes, flossing.->reflection
-There's nothing yet.->reflection
-Yeah. There's certainly been-- There's no problems and you, as you said, only have had it for a short time.->reflection
-Um, what would- what would make you decide, "This is something that's not right for me?"->question
-I guess that it does.->other
-Yeah, it looks nice. So, you want to monitor it and-and-->therapist_input
--really watch-->therapist_input
--the effect? Okay.->therapist_input
-Emily, you said it so well it-->other
--the-the piercing might not last forever, but your teeth really are-->reflection
--hopefully forever. So, okay, well thanks for-for talking about it-->other
--with me, and also before I do the exam, you know, I'm always on your case about flossing, so maybe we can take [inaudible 00:02:46]-->other
-Hi, Billy.->other
-Hi, another session and another session where you are actually on time.->other
+Chewing gum.->other
+Yeah. Yeah. You know, I've been thinking about, um, thinking about you, and thinking about, um, that first meeting we had, and where you are now. So, wh-what do you think some of the changes are that-that you've made in this- in this, sort of, five-five to six weeks that we've been meeting?->question
+Okay. Um, so are you here to maybe work on your marriage? Is that an area that you are wanting to-to work on?->question
+Okay. Can you tell me a little bit more about how, like, it's-it's not an issue for you?->question
+Um, I-I'm reluctant to give a prescription for that because I think it's really up to you. And I think it depends on how things go, as to how much you need to do.->therapist_input
+Okay. So, that might be good, is really just to focus more on band. Um, because you know, the other big concern I have for you is if you wanna go to medical school, you're not ever gonna get into medical school if you're drinking like this.->other
+And do you agree that that's what you need to do in order to be able to get home?->question
+Oh. Oh, okay. So, Um, around that, um, do you ever feel-- You feel bad or-or sick when you're-- Right now, is there something--->question
+Right. Six months. That's a long time.->reflection
+Hi, are you Katie?->question
+Yeah. And you're still with her?->question
+Yeah. Yeah. And so you've got Donna around at the moment?->question
+Okay. And you know, what's- what's happening for the- for the day, for the week.->reflection
+Okay. So we're talking about spending £50 a week-->reflection
+-you want to make.->reflection
+Your housemate may be willing to give you Narcan if they see you overdosing.->reflection
+And now a total stranger will give you a cigarette-->reflection
+Yeah. So, when you've had to write things or fill out forms before, how-how's that been for you?->question
+So, thank you for coming in today.->other
+Does he drive long distances-->question
+So I think it should be really supportive of that then.->reflection
+How much does it actually cost you a week?->question
+Yeah. Yeah. So, if you had- if you had consistent work, it would change your life in a lot of ways.->reflection
+Okay. You're sure? Okay. All right. Um, well, that's probably it then. You can, uh, head back to class and-and thanks for coming in.->other
+So what is a typical week for you as far as your alcohol use?->question
+I don't know how you're feeling right now but I'm just wondering if we can take a-just a quick glance at this-->question
+So I'm wondering, you know, most of them butt-butts head on your friendships with those- with those guys.->other
+-sounds really, you know, like it's making you feel good about yourself and—->reflection
+Mm-hmm, mm-hmm. So I see this is- this is something you've been thinking about for a while. So how far away do you think you are from that change? You know, 'cause obviously it can-can be on the never, never, but how far away are you from it, making some decisions about that?->question
+-concern about being safe.->reflection
+Mm-hmm. So when you say mostly, it kind of leaves a little bit of room for there to be some trouble.->reflection
+What could be a- what could be a first step towards that?->question
+Okay, I see. You wanna be a different sort of dad-->reflection
+It's my-- yeah it's my pleasure. It's part of my job and it's probably like this so. I'm going to hurry up and get changed for practice.->therapist_input
+Okay. What do you know about how that's dangerous?->question
+And what would you like me to do if you don't come back?->question
+Carrying on.->reflection
+Sorry?->other
+-and then, um, if things are going great, then fantastic, and if you run into any stumbling blocks, then we can maybe problem-solve together.->other
+But just that bad luck?->question
+Good. Anybody else in your family that would be really proud of-- that you're taking these steps?->question
+You kind of got a reality check today.->reflection
+Okay, so you get singled out and that's what, um, means that you end up getting-- having to go to court and get sentenced and end on probation.->reflection
+-and it's not one that you're gonna make in a hurry.->reflection
+-instead of zero days.->reflection
+Okay. And it sounds like you're listening to that black and white line.->reflection
+Oh what-- So, what does serious look like? Um--->question
+Yep, yep. Could that mean that some of your friends are probably moving around some similar sort of stuff like you, wondering about where they're going and-->question
+Okay. What things would make it easier for you to not drink?->question
+Don't inject it?->reflection
+All right. Yeah. I mean, we got to have a deal here if you're going to be on the team. Okay?->therapist_input
+So the-the-the law of, um, felony convictions is-is something that you don't have any control over. I mean, nobody does. So, um, you know, and I'm thinking about how you were talking about getting all the way through the interview and then getting rejected, you know, versus being upfront about it and-and even on the telephone to see whether it's a deal breaker or not, because it must- it sounds like it's so much harder to have that good interview and walk out of there ad know you've done well, and then get turned down.->reflection
+What did your doctor tell you to expect in terms of side effects?->question
+Okay. And so he's a truck driver and you are an aspiring social worker, and you have a son who you want to give a really great life to, and you feel that you and your boyfriend are in different, going in different directions-->reflection
+Mm-hmm. A nice car, a nice house. Mm-hmm, what else? What must be a happy life for Billy?->question
+Okay. So about eight cigarettes. So over the course of a day, just under half a pack?->reflection
+Okay. So, it sounds like you have some reasons to cut back on drinking and you have ways to relax besides drinking and it sounds like you're pretty ready to cut back.->therapist_input
+-you really mentioned that anxiety-->reflection
+I understand. So tell me, how often do you drink?->question
+So, how long do you think you could go without drinking?->question
+Yeah. Takes a lot. Takes a lot. And you're the only one that'll- that can know what it is you're willing to work through that fear for.->therapist_input
+Yeah. So, thinking about, like, you know, last time, you-you started to say that, well, you thought it was-- you deserved it and there was some thinking around that, so I'm, sort of, wondering how open you are to-to exploring that from some different angles?->question
+You've been managing in the best way you can. You also have some doubts about it too, it sounds like?->reflection
+Okay, great. Um, do you drink alcohol, including beer or wine?->question
+As to what-->question
+Okay. So it's, um, so it's good, because you're not drinking and driving, but you're still really drinking a lot. Um, and yeah. Okay. So, let's-let's talk a little bit about that, how you might be able to make some changes. Because I think you really need to- need to stop drinking like this.->other
+Certainly, certainly. I'm glad you're willing to talk to him. So before you leave here today, we'll, uh, stop by the scheduler's desk and make an appointment for you to see me back in four weeks, as well as the appointment with Dr. Kirtley. And that way, before you leave, you're all set. So do you have any other questions for me, Sarah?->question
+Do you have any idea why that is?->question
+Now, it's a discussion you don't really wanna have.->reflection
+So it sounds like if you have alcohol, then smoking is very difficult to avoid and you know what you need to do. You need to go home and as your-your son's doctor, I need to tell you you need to go home and throw out those cigarettes. You need to quit.->therapist_input
+And then, um, you walk into these places and they might just be almost storefront-->reflection
+You got the tube down-down from the top?->question
+You don't want to continue.->reflection
+The other three?->question
+Okay, great, so you're doing well. What sorts of goals do you have for after college- oh, after high school?->question
