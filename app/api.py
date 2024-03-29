@@ -6,7 +6,9 @@ from contextlib import asynccontextmanager
 
 from config import ENV_VARIABLES, MODELS_DIR
 from classifiers.bert.utils import DistillBERTClass
+from classifiers.llm.classifier import LlmClassifier
 from app.endpoints import api_router
+from classifiers.llm import load_yaml_dict, load_txt
 
 __VERSION__ = "0.1.0"
 STAGE = ENV_VARIABLES['STAGE']
@@ -21,7 +23,15 @@ async def lifespan(app: FastAPI):
 
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model_for_inference.to(device)
+        logging.info("BERT model loaded successfully")
 
+        llm_classifier = LlmClassifier(
+            chain_config=load_yaml_dict(ENV_VARIABLES["LLM_CONFIG_PATH"]),
+            context=load_txt(ENV_VARIABLES["CONTEXT_PATH"]),
+            classes=load_txt(ENV_VARIABLES["CLASSES_PATH"])
+        )
+
+        app.state.llm_classifier = llm_classifier
         app.state.bert_model = model_for_inference
         app.state.bert_tokenizer = tokenizer
         app.state.device = device

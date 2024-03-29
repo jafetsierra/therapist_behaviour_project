@@ -13,6 +13,8 @@ def get_bert_classifier(request: Request):
 @router.post("/",response_model=ApiResponse)
 async def bert_classifier_predict(request: ApiRequest, bert = Depends(get_bert_classifier)):
 
+    encode_dict = {'question': 0, 'therapist_input': 1, 'reflection': 2, 'other': 3}
+
     try:
         model, tokenizer, device = bert
         text = request.text
@@ -28,8 +30,10 @@ async def bert_classifier_predict(request: ApiRequest, bert = Depends(get_bert_c
         probabilities = torch.nn.functional.softmax(outputs, dim=1)
 
         predicted_class_index = probabilities.argmax(dim=1).item()
+        
+        decode_dict = {value: key for key, value in encode_dict.items()}
 
-        return ApiResponse(predictions=predicted_class_index)
+        return ApiResponse(predictions=decode_dict.get(predicted_class_index))
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

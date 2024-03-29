@@ -16,6 +16,9 @@ datasets = "^2.18.0"
 fastapi = "^0.110.0"
 uvicorn = {extras = ["standard"], version = "^0.29.0"}
 typer = "^0.11.1"
+langchain = "^0.1.13"
+cloudpathlib = "^0.18.1"
+openai = "^1.14.3"
 
 
 [tool.poetry.group.dev.dependencies]
