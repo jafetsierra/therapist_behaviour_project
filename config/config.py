@@ -3,9 +3,10 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent.absolute()
-DATA_DIR = BASE_DIR / 'data'
-MODEL_DIR = BASE_DIR / 'model'
-CONFIG_DIR = BASE_DIR / 'config'
+DATA_DIR = Path(BASE_DIR, 'data')
+MODELS_DIR = Path(BASE_DIR, 'models')
+CONFIG_DIR = Path(BASE_DIR, 'config')
+CLASSIFIERS_DIR = Path(BASE_DIR, 'classifiers')
 
 ENV_VARIABLES = {
     **os.environ,

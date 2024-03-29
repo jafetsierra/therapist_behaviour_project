@@ -4,24 +4,26 @@ import typer
 from torch.utils.data import DataLoader
 from transformers import DistilBertTokenizer
 from torch import cuda
-from typing import Tuple
+from typing import Annotated
 
 from .utils import Therapist, DistillBERTClass, train, valid, load_data
 
 
-def main():
+def main(
+    data_path: Annotated[str, typer.Option(help="Path to the data file")],
+    MAX_LEN: Annotated[int, typer.Option(default=512,help="Maximum length of the input")],
+    TRAIN_BATCH_SIZE: Annotated[int, typer.Option(default=12,help="Training batch size")],
+    VALID_BATCH_SIZE: Annotated[int, typer.Option(default=12,help="Validation batch size")],
+    EPOCHS: Annotated[int, typer.Option(default=3,help="Number of epochs")],
+    LEARNING_RATE: Annotated[float, typer.Option(default=1e-5,help="Learning rate")],
+    OUTPUT_PATH: Annotated[str, typer.Option(help="Path to save the model")]
+):
 
     device = 'cuda' if cuda.is_available() else 'cpu'
 
-    MAX_LEN = 512
-    TRAIN_BATCH_SIZE = 12
-    VALID_BATCH_SIZE = 12
-    EPOCHS = 1
-    LEARNING_RATE = 1e-05
-
     tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased')
 
-    train_dataset, test_dataset = load_data('data/therapist_behaviour.csv')
+    train_dataset, test_dataset = load_data(data_path)
 
     training_set = Therapist(train_dataset, tokenizer, MAX_LEN)
     testing_set = Therapist(test_dataset, tokenizer, MAX_LEN)
@@ -39,8 +41,6 @@ def main():
     training_loader = DataLoader(training_set, **train_params)
     testing_loader = DataLoader(testing_set, **test_params)
 
-
-        
     model = DistillBERTClass()
     model.to(device)
 
@@ -52,6 +52,8 @@ def main():
 
     acc = valid(model, testing_loader, loss_function, device)
     print("Accuracy on test data = %0.2f%%" % acc)
+
+    torch.save(model.state_dict(), OUTPUT_PATH)
 
 if __name__ == "__main__":
 

@@ -2,7 +2,8 @@ import torch
 import pandas as pd
 
 from torch.utils.data import Dataset
-from transformers import DistilBertModel, DistilBertTokenizer
+from transformers import DistilBertModel
+from typing import Tuple
 
 class Therapist(Dataset):
     def __init__(self, dataframe, tokenizer, max_len):
@@ -101,7 +102,7 @@ def train(epoch, loss_function, optimizer, model, training_loader, device):
         outputs = model(ids, mask)
         loss = loss_function(outputs, targets)
         tr_loss += loss.item()
-        big_val, big_idx = torch.max(outputs.data, dim=1)
+        _, big_idx = torch.max(outputs.data, dim=1)
         n_correct += calcuate_accu(big_idx, targets)
 
         nb_tr_steps += 1
@@ -128,7 +129,7 @@ def train(epoch, loss_function, optimizer, model, training_loader, device):
 
 def valid(model, testing_loader, loss_function, device):
     model.eval()
-    n_correct = 0; n_wrong = 0; total = 0; tr_loss=0; nb_tr_steps = 0; nb_tr_examples = 0
+    n_correct = 0; tr_loss=0; nb_tr_steps = 0; nb_tr_examples = 0
     with torch.no_grad():
         for _, data in enumerate(testing_loader, 0):
             ids = data['ids'].to(device, dtype = torch.long)

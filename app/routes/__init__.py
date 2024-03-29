@@ -1,0 +1,1 @@
+from .bert_classifier import router as bert_classifier_router
