@@ -1,9 +1,11 @@
 import torch
 import pandas as pd
+import matplotlib.pyplot as plt
 
 from torch.utils.data import Dataset
 from transformers import DistilBertModel
 from typing import Tuple
+from config import DATA_DIR
 
 class Therapist(Dataset):
     def __init__(self, dataframe, tokenizer, max_len):
@@ -20,7 +22,7 @@ class Therapist(Dataset):
             None,
             add_special_tokens=True,
             max_length=self.max_len,
-            pad_to_max_length=True,
+            padding='max_length',
             return_token_type_ids=True,
             truncation=True
         )
@@ -41,15 +43,20 @@ class DistillBERTClass(torch.nn.Module):
     def __init__(self):
         super(DistillBERTClass, self).__init__()
         self.l1 = DistilBertModel.from_pretrained("distilbert-base-uncased")
-        self.pre_classifier = torch.nn.Linear(768, 512)
+        for param in self.l1.parameters():
+            param.requires_grad = False
+
+        self.pre_classifier = torch.nn.Linear(768, 256)
+        self.norm = torch.nn.LayerNorm(256) 
         self.dropout = torch.nn.Dropout(0.3)
-        self.classifier = torch.nn.Linear(512, 4)
+        self.classifier = torch.nn.Linear(256, 4)
 
     def forward(self, input_ids, attention_mask):
         output_1 = self.l1(input_ids=input_ids, attention_mask=attention_mask)
         hidden_state = output_1[0]
         pooler = hidden_state[:, 0]
         pooler = self.pre_classifier(pooler)
+        pooler = self.norm(pooler) 
         pooler = torch.nn.ReLU()(pooler)
         pooler = self.dropout(pooler)
         output = self.classifier(pooler)
@@ -88,15 +95,15 @@ def calcuate_accu(big_idx, targets):
     n_correct = (big_idx==targets).sum().item()
     return n_correct
 
-def train(epoch, loss_function, optimizer, model, training_loader, device):
+def train(epoch, loss_function, optimizer, model, training_loader, validation_loader, device):
     tr_loss = 0
     n_correct = 0
     nb_tr_steps = 0
     nb_tr_examples = 0
-
+    n = 71
     model.train()
 
-    for _,data in enumerate(training_loader, 0):
+    for i,data in enumerate(training_loader, 0):
         ids = data['ids'].to(device, dtype = torch.long)
         mask = data['mask'].to(device, dtype = torch.long)
         targets = data['targets'].to(device, dtype = torch.long)
@@ -104,36 +111,37 @@ def train(epoch, loss_function, optimizer, model, training_loader, device):
         outputs = model(ids, mask)
         loss = loss_function(outputs, targets)
         tr_loss += loss.item()
-        _, big_idx = torch.max(outputs.data, dim=1)
+        big_val, big_idx = torch.max(outputs.data, dim=1)
         n_correct += calcuate_accu(big_idx, targets)
 
         nb_tr_steps += 1
         nb_tr_examples+=targets.size(0)
         
-        if _%200==0:
+        if i%n==0:
             loss_step = tr_loss/nb_tr_steps
             accu_step = (n_correct*100)/nb_tr_examples 
-            print(f"Training Loss per 200 steps: {loss_step}")
-            print(f"Training Accuracy per 200 steps: {accu_step}")
+            print(f"Training Loss per {n} steps: {loss_step:.3f},  --Training Accuracy per {n} steps: {accu_step:.3f}")
+            
 
         optimizer.zero_grad()
         loss.backward()
         # # When using GPU
         optimizer.step()
 
-    print(f'The Total Accuracy for Epoch {epoch}: {(n_correct*100)/nb_tr_examples}')
     epoch_loss = tr_loss/nb_tr_steps
     epoch_accu = (n_correct*100)/nb_tr_examples
-    print(f"Training Loss Epoch: {epoch_loss}")
-    print(f"Training Accuracy Epoch: {epoch_accu}")
 
-    return 
+    print(f"Epoch: {epoch} \n--Training Loss: {epoch_loss:.3f},  --Training Accuracy: {epoch_accu:.3f}")
+
+    val_loss,val_accu = valid(model, validation_loader, loss_function, device)
+
+    return epoch_loss, epoch_accu, val_loss, val_accu
 
 def valid(model, testing_loader, loss_function, device):
     model.eval()
     n_correct = 0; tr_loss=0; nb_tr_steps = 0; nb_tr_examples = 0
     with torch.no_grad():
-        for _, data in enumerate(testing_loader, 0):
+        for i, data in enumerate(testing_loader, 0):
             ids = data['ids'].to(device, dtype = torch.long)
             mask = data['mask'].to(device, dtype = torch.long)
             targets = data['targets'].to(device, dtype = torch.long)
@@ -145,15 +153,32 @@ def valid(model, testing_loader, loss_function, device):
 
             nb_tr_steps += 1
             nb_tr_examples+=targets.size(0)
-            
-            if _%100==0:
-                loss_step = tr_loss/nb_tr_steps
-                accu_step = (n_correct*100)/nb_tr_examples
-                print(f"Validation Loss per 100 steps: {loss_step}")
-                print(f"Validation Accuracy per 100 steps: {accu_step}")
+    
     epoch_loss = tr_loss/nb_tr_steps
     epoch_accu = (n_correct*100)/nb_tr_examples
-    print(f"Validation Loss Epoch: {epoch_loss}")
-    print(f"Validation Accuracy Epoch: {epoch_accu}")
+    print(f"--Validation Loss: {epoch_loss:.3f},  --Validation Accuracy: {epoch_accu:.3f}")
     
-    return epoch_accu
+    return epoch_loss, epoch_accu
+
+def plot_results(results_df:pd.DataFrame):
+    # Plotting
+    plt.figure(figsize=(10, 5))
+    plt.subplot(1, 2, 1)
+    plt.plot(results_df['epoch'], results_df['train_loss'], label='Train Loss')
+    plt.plot(results_df['epoch'], results_df['val_loss'], label='Validation Loss')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.title('Training and Validation Loss')
+    plt.legend()
+
+    plt.subplot(1, 2, 2)
+    plt.plot(results_df['epoch'], results_df['train_accuracy'], label='Train Accuracy')
+    plt.plot(results_df['epoch'], results_df['val_accuracy'], label='Validation Accuracy')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.title('Training and Validation Accuracy')
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
+    plt.savefig(DATA_DIR / 'training_validation_results.png')

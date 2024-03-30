@@ -19,12 +19,29 @@
             "name": "package context creation",
             "type": "debugpy",
             "request": "launch",
-            "module": "classifiers.llm.generate_context",
+            "module": "pipeline.llm.generate_context",
             "console": "integratedTerminal",
             "args": [
                 "--data-path","data/full.csv",
                 "--output-path","data/context.txt"
             ]
-        }
+        },
+        {
+            "name": "training bert",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.bert.training_script",
+            "console": "integratedTerminal",
+            "args": [
+                "--train-data-path","data/train.csv",
+                "--test-data-path","data/test.csv",
+                "--max-len","512",
+                "--train-batch-size","12",
+                "--valid-batch-size","12",
+                "--epochs","10",
+                "--learning-rate","1e-3",
+                "--output-path","models/distilbert_finetuned.pth"
+            ]
+        },
     ]
 }
