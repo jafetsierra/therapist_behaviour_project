@@ -189,3 +189,10 @@ def plot_results(results_df:pd.DataFrame):
     plt.tight_layout()
     plt.show()
     plt.savefig('data/training_validation_results.png')
+
+def get_weights(df: pd.DataFrame):
+    """
+    Get the weights for the classes
+    """
+    class_weights = df['encode_cat'].value_counts(normalize=True)
+    return 1 / class_weights

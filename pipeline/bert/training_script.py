@@ -8,7 +8,7 @@ from torch import cuda
 from typer import Option
 from torch.optim.lr_scheduler import StepLR
 
-from .utils import Therapist, DistillBERTClass, train, valid, plot_results
+from .utils import Therapist, DistillBERTClass, train, valid, plot_results, get_weights
 from config import DATA_DIR
 
 def main(
@@ -58,8 +58,11 @@ def main(
     print(f"Total parameters: {sum(p.numel() for p in model.parameters())}")
     print(f"Trainable parameter: {sum(p.numel() for p in model.parameters() if p.requires_grad)}")
 
-    loss_function = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate, weight_decay=5e-3)
+    weights = torch.tensor(get_weights(train_dataset), dtype=torch.float).to(device)
+
+    loss_function = torch.nn.CrossEntropyLoss(weight=weights, reduction='mean')
+    # loss_function = torch.nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate, weight_decay=1e-2)
     scheduler = StepLR(optimizer, step_size=2, gamma=0.9)
 
     min_val_loss = float('inf')
@@ -98,3 +101,6 @@ def main(
 if __name__ == "__main__":
 
     typer.run(main)
+
+
+
