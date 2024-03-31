@@ -15,6 +15,11 @@ generate train and test dataset from raw_file
 poetry run python pipeline/process_data.py --data-path data/full.csv --train-output-path data/train.csv --test-output-path data/test.csv
 ```
 
+upload train examples to qdrant
+```
+poetry run python pipeline/llm/upload_to_qdrant --data-path data/train.csv --collection-name therapist_behaviour
+```
+
 context file generation for LLM classifier:
 ```
 poetry run python pipeline/llm/generate_context.py --data-path data/train.csv --output-path data/context.txt

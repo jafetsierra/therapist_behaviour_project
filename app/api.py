@@ -27,7 +27,6 @@ async def lifespan(app: FastAPI):
 
         llm_classifier = LlmClassifier(
             chain_config=load_yaml_dict(ENV_VARIABLES["LLM_CONFIG_PATH"]),
-            context=load_txt(ENV_VARIABLES["CONTEXT_PATH"]),
             classes=load_txt(ENV_VARIABLES["CLASSES_PATH"])
         )
 

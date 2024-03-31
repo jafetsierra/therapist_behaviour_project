@@ -43,5 +43,16 @@
                 "--output-path","models/distilbert_finetuned.pth"
             ]
         },
+        {
+            "name": "upload_to_qdrant",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.llm.upload_to_qdrant",
+            "console": "integratedTerminal",
+            "args": [
+                "--data-path","data/train.csv",
+                "--collection-name","therapist_behaviour"
+            ]
+        },
     ]
 }

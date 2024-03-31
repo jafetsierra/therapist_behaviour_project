@@ -116,6 +116,11 @@ __pypackages__/
 celerybeat-schedule
 celerybeat.pid
 
+qdrant_storage/*
+qdrant_storage/
+/qdrant_storage/
+/qdrant_storage
+
 # SageMath parsed files
 *.sage.py
 
