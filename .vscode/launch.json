@@ -54,5 +54,19 @@
                 "--collection-name","therapist_behaviour"
             ]
         },
+        {
+            "name": "train_xgboost_classifier",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.xgboost.train_xgboost_classifier",
+            "console": "integratedTerminal",
+            "args": [
+                "--train-data-path","data/train.csv",
+                "--text-column","text",
+                "--label-column","encode_cat",
+                "--output-model-path","models/xgboost_classifier.pkl",
+                "--output-vectorizer-path","models/tfidf_vectorizer.pkl"
+            ]
+        },
     ]
 }

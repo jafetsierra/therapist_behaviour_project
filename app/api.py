@@ -1,5 +1,7 @@
 import logging
 import torch
+import joblib
+
 from fastapi import FastAPI
 from transformers import DistilBertTokenizer
 from contextlib import asynccontextmanager
@@ -16,6 +18,7 @@ STAGE = ENV_VARIABLES['STAGE']
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     try:
+        # Load BERT model
         tokenizer = DistilBertTokenizer.from_pretrained('distilbert/distilbert-base-uncased')
         model_for_inference = DistillBERTClass()
         model_for_inference.load_state_dict(torch.load(MODELS_DIR / 'distilbert_finetuned.pth'))
@@ -25,11 +28,20 @@ async def lifespan(app: FastAPI):
         model_for_inference.to(device)
         logging.info("BERT model loaded successfully")
 
+        # Load LLM model
         llm_classifier = LlmClassifier(
             chain_config=load_yaml_dict(ENV_VARIABLES["LLM_CONFIG_PATH"]),
             classes=load_txt(ENV_VARIABLES["CLASSES_PATH"])
         )
+        logging.info("LLM model loaded successfully")
 
+        # Load xgboost model
+        xgb_classifier = joblib.load(ENV_VARIABLES["XGBOOST_MODEL_PATH"])
+        vectorizer = joblib.load(ENV_VARIABLES["XGBOOST_VECTORIZER_PATH"])
+        logging.info("XGBoost model loaded successfully")
+
+        app.state.xgboost_classifier = xgb_classifier
+        app.state.xgboost_vectorizer = vectorizer
         app.state.llm_classifier = llm_classifier
         app.state.bert_model = model_for_inference
         app.state.bert_tokenizer = tokenizer
