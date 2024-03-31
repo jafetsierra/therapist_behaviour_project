@@ -32,9 +32,14 @@ poetry run python pipeline/llm/upload_to_qdrant --data-path data/train.csv --col
 ```
 poetry run python pipeline.bert.training_script.py --train-data-path data/train.csv --test-data-path data/test.csv --max-len 256 --train-batch-size 32 --valid-batch-size 12 --epochs 20 --learning-rate 1e-4 --output-path models/distilbert_finetuned.pth
 ```
+5. Xgboost classifier
+you would need to specify the path to the model checkpoint in .env variables. if you dont have any, you can train one using this convenient script:
+```
+poetry run python pipeline.xgboost.train_xgboost_classifier.py --train-data-path data/train.csv --text-column text --label-column encode_cat --output-model-path models/xgboost_classifier.pkl --output-vectorizer-path models/tfidf_vectorizer.pkl
+```
 
 ## Use
-To try the App locally you can use:
+Once you have all the prerequisites you can try the App locally using:
 ```
 poetry run uvicorn app.api:app --reload
 ```
