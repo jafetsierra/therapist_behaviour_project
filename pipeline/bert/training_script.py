@@ -6,9 +6,10 @@ from torch.utils.data import DataLoader
 from transformers import DistilBertTokenizer
 from torch import cuda
 from typer import Option
+from torch.optim.lr_scheduler import StepLR
 
 from .utils import Therapist, DistillBERTClass, train, valid, plot_results
-
+from config import DATA_DIR
 
 def main(
     train_data_path: str = Option(..., help="Path to the train data file"),
@@ -17,7 +18,7 @@ def main(
     train_batch_size: int = Option(12, help="Training batch size"),
     valid_batch_size: int = Option(12, help="Validation batch size"),
     epochs: int = Option(3, help="Number of epochs"),
-    learning_rate: float = Option(1e-5, help="Learning rate"),
+    learning_rate: float = Option(1e-3, help="Learning rate"),
     output_path: str = Option(..., help="Path to save the model")
 ):
 
@@ -30,7 +31,7 @@ def main(
     }
     device = 'cuda' if cuda.is_available() else 'cpu'
 
-    tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased')
+    tokenizer = DistilBertTokenizer.from_pretrained('distilbert/distilbert-base-uncased')
 
     train_dataset = pd.read_csv(train_data_path)
     test_dataset = pd.read_csv(test_data_path)
@@ -54,15 +55,19 @@ def main(
     model = DistillBERTClass()
     model.to(device)
 
+    print(f"Total parameters: {sum(p.numel() for p in model.parameters())}")
+    print(f"Trainable parameter: {sum(p.numel() for p in model.parameters() if p.requires_grad)}")
+
     loss_function = torch.nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate)
-    
+    optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate, weight_decay=5e-3)
+    scheduler = StepLR(optimizer, step_size=2, gamma=0.9)
+
     min_val_loss = float('inf')
     early_stop_counter = 0
     early_stop_limit = 2  
 
     for epoch in range(epochs):
-        train_loss, train_accu, val_loss, val_accu = train(epoch, loss_function, optimizer, model, training_loader, testing_loader, device)
+        train_loss, train_accu, val_loss, val_accu = train(epoch, loss_function, optimizer, model, training_loader, testing_loader, device, scheduler)
         results['epoch'].append(epoch)
         results['train_loss'].append(train_loss)
         results['train_accuracy'].append(train_accu)
@@ -85,6 +90,7 @@ def main(
     print("Accuracy on test data = %0.2f%%" % test_acc)
 
     results_df = pd.DataFrame(results)
+    results_df.to_csv(DATA_DIR / 'training.csv')
     plot_results(results_df)
 
     torch.save(model.state_dict(), output_path)

@@ -16,7 +16,7 @@ STAGE = ENV_VARIABLES['STAGE']
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     try:
-        tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+        tokenizer = DistilBertTokenizer.from_pretrained('distilbert/distilbert-base-uncased')
         model_for_inference = DistillBERTClass()
         model_for_inference.load_state_dict(torch.load(MODELS_DIR / 'distilbert_finetuned.pth'))
         model_for_inference.eval()

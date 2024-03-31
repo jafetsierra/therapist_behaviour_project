@@ -2,10 +2,10 @@ import torch
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
 from transformers import DistilBertModel
 from typing import Tuple
-from config import DATA_DIR
 
 class Therapist(Dataset):
     def __init__(self, dataframe, tokenizer, max_len):
@@ -38,25 +38,28 @@ class Therapist(Dataset):
     def __len__(self):
         return self.len
     
-
 class DistillBERTClass(torch.nn.Module):
     def __init__(self):
         super(DistillBERTClass, self).__init__()
-        self.l1 = DistilBertModel.from_pretrained("distilbert-base-uncased")
-        for param in self.l1.parameters():
+        self.l1 = DistilBertModel.from_pretrained("distilbert/distilbert-base-uncased")
+        for param in self.l1.transformer.layer.parameters():
             param.requires_grad = False
 
-        self.pre_classifier = torch.nn.Linear(768, 256)
-        self.norm = torch.nn.LayerNorm(256) 
-        self.dropout = torch.nn.Dropout(0.3)
-        self.classifier = torch.nn.Linear(256, 4)
+        # for lin_param in self.l1.transformer.layer[5].ffn.lin2.parameters():
+        #     lin_param.requires_grad = True
+
+        self.linear_1 = torch.nn.Linear(768, 64)
+        self.norm_1 = torch.nn.LayerNorm(64) 
+        self.dropout = torch.nn.Dropout(0.7)
+        self.classifier = torch.nn.Linear(64, 4)
 
     def forward(self, input_ids, attention_mask):
         output_1 = self.l1(input_ids=input_ids, attention_mask=attention_mask)
         hidden_state = output_1[0]
         pooler = hidden_state[:, 0]
-        pooler = self.pre_classifier(pooler)
-        pooler = self.norm(pooler) 
+        pooler = self.dropout(pooler)
+        pooler = self.linear_1(pooler)
+        pooler = self.norm_1(pooler) 
         pooler = torch.nn.ReLU()(pooler)
         pooler = self.dropout(pooler)
         output = self.classifier(pooler)
@@ -81,9 +84,7 @@ def load_data(path)-> Tuple[pd.DataFrame, pd.DataFrame]:
     df = df.drop_duplicates(subset=['text'])
 
     train_size = 0.9
-    train_dataset=df.sample(frac=train_size,random_state=200)
-    test_dataset=df.drop(train_dataset.index).reset_index(drop=True)
-    train_dataset = train_dataset.reset_index(drop=True)
+    train_dataset, test_dataset = train_test_split(df, train_size=train_size, stratify=df['encode_cat'], random_state=200)
 
     print("FULL Dataset: {}".format(df.shape))
     print("TRAIN Dataset: {}".format(train_dataset.shape))
@@ -95,7 +96,7 @@ def calcuate_accu(big_idx, targets):
     n_correct = (big_idx==targets).sum().item()
     return n_correct
 
-def train(epoch, loss_function, optimizer, model, training_loader, validation_loader, device):
+def train(epoch, loss_function, optimizer, model, training_loader, validation_loader, device, scheduler):
     tr_loss = 0
     n_correct = 0
     nb_tr_steps = 0
@@ -127,6 +128,12 @@ def train(epoch, loss_function, optimizer, model, training_loader, validation_lo
         loss.backward()
         # # When using GPU
         optimizer.step()
+
+    scheduler.step()
+
+    for param_group in optimizer.param_groups:
+        current_lr = param_group['lr']
+        print(f"Current learning rate after epoch {epoch}: {current_lr}")
 
     epoch_loss = tr_loss/nb_tr_steps
     epoch_accu = (n_correct*100)/nb_tr_examples
@@ -181,4 +188,4 @@ def plot_results(results_df:pd.DataFrame):
 
     plt.tight_layout()
     plt.show()
-    plt.savefig(DATA_DIR / 'training_validation_results.png')
+    plt.savefig('data/training_validation_results.png')

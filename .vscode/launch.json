@@ -35,11 +35,11 @@
             "args": [
                 "--train-data-path","data/train.csv",
                 "--test-data-path","data/test.csv",
-                "--max-len","512",
-                "--train-batch-size","12",
+                "--max-len","256",
+                "--train-batch-size","32",
                 "--valid-batch-size","12",
-                "--epochs","10",
-                "--learning-rate","1e-3",
+                "--epochs","20",
+                "--learning-rate","1e-4",
                 "--output-path","models/distilbert_finetuned.pth"
             ]
         },
