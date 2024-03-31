@@ -1,0 +1,4 @@
+therapist_input
+question
+reflextion
+other

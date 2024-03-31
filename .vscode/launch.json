@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}${pathSeparator}${env:PYTHONPATH}"
+            }
+        },
+        {
+            "name": "package context creation",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.llm.generate_context",
+            "console": "integratedTerminal",
+            "args": [
+                "--data-path","data/full.csv",
+                "--output-path","data/context.txt"
+            ]
+        },
+        {
+            "name": "training bert",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.bert.training_script",
+            "console": "integratedTerminal",
+            "args": [
+                "--train-data-path","data/train.csv",
+                "--test-data-path","data/test.csv",
+                "--max-len","256",
+                "--train-batch-size","32",
+                "--valid-batch-size","12",
+                "--epochs","20",
+                "--learning-rate","1e-4",
+                "--output-path","models/distilbert_finetuned.pth"
+            ]
+        },
+        {
+            "name": "upload_to_qdrant",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.llm.upload_to_qdrant",
+            "console": "integratedTerminal",
+            "args": [
+                "--data-path","data/train.csv",
+                "--collection-name","therapist_behaviour"
+            ]
+        },
+        {
+            "name": "train_xgboost_classifier",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.xgboost.train_xgboost_classifier",
+            "console": "integratedTerminal",
+            "args": [
+                "--train-data-path","data/train.csv",
+                "--text-column","text",
+                "--label-column","encode_cat",
+                "--output-model-path","models/xgboost_classifier.pkl",
+                "--output-vectorizer-path","models/tfidf_vectorizer.pkl"
+            ]
+        },
+    ]
+}

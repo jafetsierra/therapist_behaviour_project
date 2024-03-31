@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# models
+*.pth
+*.pkl
+
 # C extensions
 *.so
 
@@ -115,6 +119,11 @@ __pypackages__/
 # Celery stuff
 celerybeat-schedule
 celerybeat.pid
+
+qdrant_storage/*
+qdrant_storage/
+/qdrant_storage/
+/qdrant_storage
 
 # SageMath parsed files
 *.sage.py
