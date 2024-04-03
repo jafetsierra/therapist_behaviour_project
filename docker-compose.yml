@@ -1,10 +1,8 @@
-version: '3'
+version: '3.8'  # 3.8 or higher for GPU support
 services:
   therapist_app:
-    image: therapist_behaviour:alpine
+    image: therapist_behaviour:latest
     env_file:
       - .env
     ports:
       - "8000:8000"
-    volumes:
-      - ~/.aws:root/.aws

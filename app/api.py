@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
         # Load BERT model
         tokenizer = DistilBertTokenizer.from_pretrained('distilbert/distilbert-base-uncased')
         model_for_inference = DistillBERTClass()
-        model_for_inference.load_state_dict(torch.load(MODELS_DIR / 'distilbert_finetuned.pth'))
+        model_for_inference.load_state_dict(torch.load(MODELS_DIR / 'distilbert_finetuned.pth',map_location=torch.device('cuda'if torch.cuda.is_available() else "cpu")))
         model_for_inference.eval()
 
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

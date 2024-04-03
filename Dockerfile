@@ -1,5 +1,4 @@
-# Use Python 3.10
-FROM huggingface/transformers-pytorch-cpu
+FROM python:3.10-slim-buster
 
 RUN apt-get update && apt-get -y install gcc g++ && apt-get install -y \
     python3-dev \
@@ -14,14 +13,11 @@ ENV PATH="${PATH}:/root/.local/bin"
 RUN poetry config virtualenvs.create false
 
 COPY pyproject.toml poetry.lock* /program/
-
 RUN poetry install --no-interaction --no-ansi --without=dev
 
 ENV PYTHONPATH "${PYTHONPATH}:${PWD}"
-# disable python output buffering
 ENV PYTHONUNBUFFERED 1
 
-# TODO do not copy all files, only the necessary ones
 COPY . .
 
 EXPOSE 8000
