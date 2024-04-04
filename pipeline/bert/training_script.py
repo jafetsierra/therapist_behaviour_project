@@ -1,12 +1,17 @@
 import torch
 import typer
 import pandas as pd
+import os
+import sys
 
 from torch.utils.data import DataLoader
 from transformers import DistilBertTokenizer
 from torch import cuda
 from typer import Option
 from torch.optim.lr_scheduler import StepLR
+
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..','..'))
+sys.path.append(root_path)
 
 from .utils import Therapist, DistillBERTClass, train, valid, plot_results, get_weights
 from config import DATA_DIR

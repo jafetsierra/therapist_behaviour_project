@@ -44,6 +44,12 @@ Once you have all the prerequisites you can try the App locally using:
 poetry run uvicorn app.api:app --reload
 ```
 
+## Run Evaluation of the classification models.
+Here you should provide a wandb api_key in the .env file to correctly store the values there
+```
+poetry run python pipeline/evaluation/evaluate.py --test-data data/test.csv
+```
+
 ## Docker use
 Create Docker image
 ```
