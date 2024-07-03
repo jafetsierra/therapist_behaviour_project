@@ -1,4 +1,4 @@
-# Therapist_behaviour_project for reflexai interview
+# Therapist_behaviour_project
 
 ## Installation 
 
